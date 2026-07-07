@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>AI Receptionist — 24/7 Automated Customer Service</title>
+  <title>AutoFlow — AI Automation for Growing Businesses</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -59,7 +59,7 @@
       font-size: 56px;
       font-weight: 800;
       line-height: 1.15;
-      max-width: 750px;
+      max-width: 780px;
       margin: 0 auto 20px;
     }
 
@@ -68,7 +68,7 @@
     .hero p {
       color: #aaa;
       font-size: 18px;
-      max-width: 550px;
+      max-width: 580px;
       margin: 0 auto 40px;
       line-height: 1.7;
     }
@@ -89,6 +89,9 @@
       font-weight: 600;
       font-size: 15px;
       transition: background 0.2s;
+      border: none;
+      cursor: pointer;
+      display: inline-block;
     }
 
     .btn-primary:hover { background: #574fd6; }
@@ -103,6 +106,7 @@
       font-size: 15px;
       border: 1px solid #333;
       transition: border-color 0.2s;
+      cursor: pointer;
     }
 
     .btn-secondary:hover { border-color: #6c63ff; }
@@ -182,21 +186,14 @@
       border-radius: 12px;
       padding: 32px;
       transition: border-color 0.2s;
-      animation: Scrolling both;
+      animation: fadeUp both;
       animation-timeline: view();
       animation-range: entry 20% cover 100vh;
     }
 
-    @keyframes Scrolling {
-      from {
-        opacity: 0.25;
-        transform: translateY(100px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0px);
-      }
-
+    @keyframes fadeUp {
+      from { opacity: 0.25; transform: translateY(100px); }
+      to { opacity: 1; transform: translateY(0px); }
     }
 
     .card:hover { border-color: #6c63ff44; }
@@ -217,10 +214,60 @@
       line-height: 1.7;
     }
 
+    /* How it works */
+    .how {
+      padding: 100px 60px;
+      background: #0f0f0f;
+      text-align: center;
+    }
+
+    .how h2 {
+      font-size: 36px;
+      margin-bottom: 12px;
+    }
+
+    .how h2 span { color: #6c63ff; }
+
+    .how > p {
+      color: #aaa;
+      margin-bottom: 60px;
+    }
+
+    .how-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .how-step {
+      text-align: left;
+      padding: 0 12px;
+    }
+
+    .how-step .num {
+      font-size: 14px;
+      color: #6c63ff;
+      font-weight: 700;
+      margin-bottom: 14px;
+      letter-spacing: 1px;
+    }
+
+    .how-step h3 {
+      font-size: 19px;
+      margin-bottom: 10px;
+    }
+
+    .how-step p {
+      color: #888;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
     /* Pricing */
     .pricing {
       padding: 100px 60px;
-      background: #0f0f0f;
       text-align: center;
     }
 
@@ -250,21 +297,9 @@
       padding: 40px 36px;
       width: 300px;
       text-align: left;
-      animation: Scrolling both;
+      animation: fadeUp both;
       animation-timeline: view();
       animation-range: entry 20% cover 100vh;
-    }
-
-    @keyframes Scrolling {
-      from {
-        opacity: 0.25;
-        transform: translateY(100px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0px);
-      }
-
     }
 
     .pricing-card.popular {
@@ -287,8 +322,14 @@
 
     .pricing-card h3 {
       font-size: 18px;
-      margin-bottom: 8px;
+      margin-bottom: 4px;
       color: #aaa;
+    }
+
+    .pricing-card .job-tag {
+      font-size: 13px;
+      color: #6c63ff;
+      margin-bottom: 20px;
     }
 
     .price {
@@ -324,10 +365,17 @@
       font-weight: 700;
     }
 
+    .pricing-note {
+      color: #666;
+      font-size: 13px;
+      margin-top: 30px;
+    }
+
     /* CTA */
     .cta {
       text-align: center;
       padding: 100px 20px;
+      background: #0f0f0f;
     }
 
     .cta h2 {
@@ -357,9 +405,10 @@
 
 <!-- NAV -->
 <nav>
-  <div class="logo">AI<span>Receptionist</span></div>
+  <div class="logo">Auto<span>Flow</span></div>
   <div>
     <a href="#features">Features</a>
+    <a href="#how">How It Works</a>
     <a href="#pricing">Pricing</a>
     <a href="mailto:eronfeka28@gmail.com">Contact</a>
   </div>
@@ -367,50 +416,71 @@
 
 <!-- HERO -->
 <section class="hero">
-  <div class="badge">🤖 Powered by GPT-4</div>
-  <h1>Your Business Deserves a <span>24/7 AI Receptionist</span></h1>
-  <p>Automatically reply to customer emails, handle reservations, and answer calls — while you focus on running your business.</p>
+  <div class="badge">🤖 AI Automation for SMBs</div>
+  <h1>The Busywork Your Business Can't Keep Up With — <span>Automated</span></h1>
+  <p>AutoFlow builds AI systems that follow up with leads, book appointments, and handle customer messages and calls — so nothing falls through the cracks, and you don't have to lift a finger.</p>
   <div class="buttons">
     <a href="mailto:eronfeka28@gmail.com?subject=Demo Request" class="btn-primary">Book a Free Demo</a>
     <a href="#features" class="btn-secondary">See How It Works</a>
   </div>
 </section>
 
-
-
 <!-- FEATURES -->
 <section class="features" id="features">
-  <h2>Everything Your Business <span>Needs</span></h2>
+  <h2>What AutoFlow <span>Handles For You</span></h2>
   <div class="grid">
     <div class="card">
       <div class="icon">📧</div>
-      <h3>Smart Email Replies</h3>
-      <p>The AI reads every customer email and replies instantly with the right information — reservations, hours, questions, all handled automatically.</p>
+      <h3>Automated Follow-Ups</h3>
+      <p>Leads and customers get timely follow-up emails automatically — no more cold leads slipping through because nobody had time to reply.</p>
     </div>
     <div class="card">
       <div class="icon">📞</div>
-      <h3>AI Phone Receptionist</h3>
-      <p>A real phone number your customers can call. The AI picks up 24/7, answers questions and takes bookings just like a human receptionist.</p>
+      <h3>AI Call & Message Handling</h3>
+      <p>A real phone line and inbox your customers can reach 24/7. The AI answers questions, takes messages, and escalates when a human is truly needed.</p>
     </div>
     <div class="card">
       <div class="icon">📅</div>
-      <h3>Reservation Management</h3>
-      <p>Every reservation is automatically extracted, saved and confirmed. No more missed bookings or double entries.</p>
+      <h3>Appointment Booking</h3>
+      <p>Bookings are captured, confirmed, and added to your calendar automatically — no double-bookings, no manual entry.</p>
     </div>
     <div class="card">
       <div class="icon">📊</div>
       <h3>Daily Summary Email</h3>
-      <p>Every morning you receive a full summary of all inquiries, replies sent and reservations made — so you're always in control.</p>
+      <p>Every morning you get a clear summary of what came in, what was handled, and what needs your attention — so you stay in control without micromanaging.</p>
     </div>
     <div class="card">
-      <div class="icon">🌍</div>
-      <h3>Multilingual</h3>
-      <p>The AI automatically detects and replies in the customer's language — German, English, French and more.</p>
+      <div class="icon">🔗</div>
+      <h3>Built Around Your Workflow</h3>
+      <p>AutoFlow isn't a rigid template — it's configured around the specific tasks your business struggles to keep up with, whatever those are.</p>
     </div>
     <div class="card">
       <div class="icon">⚡</div>
-      <h3>Set Up in 24 Hours</h3>
-      <p>No technical knowledge needed. We handle everything. Your AI receptionist is live within 24 hours of signing up.</p>
+      <h3>Live in 24-48 Hours</h3>
+      <p>No technical knowledge needed on your end. We scope the job, build it, and connect it to your existing tools fast.</p>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how" id="how">
+  <h2>How It <span>Works</span></h2>
+  <p>Three steps from "we're drowning in busywork" to "it just runs."</p>
+  <div class="how-grid">
+    <div class="how-step">
+      <div class="num">STEP 1</div>
+      <h3>Tell us your bottleneck</h3>
+      <p>A short call to identify where your business is losing time or leads — follow-ups, bookings, messages, or calls.</p>
+    </div>
+    <div class="how-step">
+      <div class="num">STEP 2</div>
+      <h3>We build & connect it</h3>
+      <p>We build the automation and connect it to your email, calendar, or phone line — live within 24-48 hours.</p>
+    </div>
+    <div class="how-step">
+      <div class="num">STEP 3</div>
+      <h3>It runs itself</h3>
+      <p>AutoFlow handles the work in the background. You get a daily summary and step in only when it matters.</p>
     </div>
   </div>
 </section>
@@ -418,72 +488,62 @@
 <!-- PRICING -->
 <section class="pricing" id="pricing">
   <h2>Simple <span>Pricing</span></h2>
-  <p>No hidden fees. Cancel anytime.</p>
+  <p>Priced by the job AutoFlow needs to do for your business. Cancel anytime.</p>
   <div class="pricing-grid">
     <div class="pricing-card">
       <h3>Starter</h3>
-      <div class="price">€199<span>/mo</span></div>
+      <div class="job-tag">One core task, automated</div>
+      <div class="price">$449<span>/mo</span></div>
       <ul>
-        <li>AI Email Receptionist</li>
-        <li>Reservation Handling</li>
-        <li>Daily Summary Email</li>
-        <li>Setup in 24 hours</li>
-        <li>Email Support</li>
+        <li>Automated email follow-ups</li>
+        <li>Inquiry replies, 24/7</li>
+        <li>Daily summary email</li>
+        <li>Live in 24-48 hours</li>
+        <li>Email support</li>
       </ul>
       <a href="mailto:eronfeka28@gmail.com?subject=Starter Plan" class="btn-primary" style="display:block;text-align:center;">Get Started</a>
     </div>
     <div class="pricing-card popular">
       <div class="popular-badge">Most Popular</div>
-      <h3>Pro</h3>
-      <div class="price">€349<span>/mo</span></div>
+      <h3>Growth</h3>
+      <div class="job-tag">Follow-ups + booking, handled</div>
+      <div class="price">$649<span>/mo</span></div>
       <ul>
         <li>Everything in Starter</li>
-        <li>AI Phone Receptionist</li>
-        <li>Local Phone Number</li>
-        <li>Multilingual Support</li>
-        <li>Priority Support</li>
+        <li>Appointment booking & calendar sync</li>
+        <li>Customer message handling</li>
+        <li>Multilingual support</li>
+        <li>Priority support</li>
       </ul>
-      <a href="mailto:eronfeka28@gmail.com?subject=Pro Plan" class="btn-primary" style="display:block;text-align:center;">Get Started</a>
+      <a href="mailto:eronfeka28@gmail.com?subject=Growth Plan" class="btn-primary" style="display:block;text-align:center;">Get Started</a>
+    </div>
+    <div class="pricing-card">
+      <h3>Full Automation</h3>
+      <div class="job-tag">Every channel, covered</div>
+      <div class="price">$899<span>/mo</span></div>
+      <ul>
+        <li>Everything in Growth</li>
+        <li>AI phone line & call handling</li>
+        <li>Multi-channel coverage (email + SMS + calls)</li>
+        <li>Custom workflow requests</li>
+        <li>Dedicated priority support</li>
+      </ul>
+      <a href="mailto:eronfeka28@gmail.com?subject=Full Automation Plan" class="btn-primary" style="display:block;text-align:center;">Get Started</a>
     </div>
   </div>
+  <p class="pricing-note">Not sure which tier fits? Book a free demo and we'll scope it together.</p>
 </section>
 
 <!-- CTA -->
 <section class="cta">
-  <h2>Ready to Never Miss a <span>Customer</span> Again?</h2>
+  <h2>Ready to Stop Losing <span>Leads & Hours</span>?</h2>
   <p>Book a free 10 minute demo and see it live in action.</p>
   <a href="mailto:eronfeka28@gmail.com?subject=Demo Request" class="btn-primary">Book a Free Demo</a>
 </section>
 
 <footer>
-  © 2026 AIReceptionist. Built by Eron Feka.
+  © 2026 AutoFlow. Built by Eron Feka.
 </footer>
-
-<script>
-  function startDemo() {
-    var script = document.createElement('script');
-    script.src = 'https://cdn.vapi.ai/vapi.js';
-    script.onload = function() {
-      var vapi = new Vapi('ecf82f87-e233-4f39-a540-4781231f2f0b');
-      vapi.start({
-        firstMessage: "Hi! I'm an AI receptionist demo. Ask me anything — about our hours, making a reservation, or how this works!",
-        model: {
-          provider: "openai",
-          model: "gpt-4o-mini",
-          messages: [{
-            role: "system",
-            content: "You are a demo AI receptionist. Show the visitor how the AI receptionist works. Be friendly and impressive. Answer questions about the product and demonstrate taking a reservation."
-          }]
-        },
-        voice: {
-          provider: "playht",
-          voiceId: "jennifer"
-        }
-      });
-    };
-    document.head.appendChild(script);
-  }
-</script>
 
 </body>
 </html>
